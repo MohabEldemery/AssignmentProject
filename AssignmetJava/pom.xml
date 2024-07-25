@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -7,7 +6,6 @@
     <groupId>org.example</groupId>
     <artifactId>AssignmetJava</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging> <!-- Changed to war -->
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -40,28 +38,34 @@
                     <target>17</target>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
             </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.3.0</version>
-                <configuration>
-                    <mainClass>org.example.Main</mainClass> <!-- Fully qualified class name -->
-                </configuration>
-            </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version> <!-- Add this plugin to handle war packaging -->
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.example.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
             </plugin>
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>my-repo</id>
+            <url>http://my.repository.url/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>my-snapshot-repo</id>
+            <url>http://my.repository.url/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
