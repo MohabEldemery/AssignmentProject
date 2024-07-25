@@ -50,9 +50,17 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.example.Main</mainClass>
+                            <mainClass>org.example.Main</mainClass> <!-- Update with your actual main class -->
                         </manifest>
                     </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <mainClass>org.example.Main</mainClass> <!-- Update with your actual main class -->
                 </configuration>
             </plugin>
         </plugins>
