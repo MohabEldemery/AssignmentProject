@@ -57,14 +57,4 @@
         </plugins>
     </build>
 
-    <distributionManagement>
-        <repository>
-            <id>my-repo</id>
-            <url>http://my.repository.url/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>my-snapshot-repo</id>
-            <url>http://my.repository.url/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
