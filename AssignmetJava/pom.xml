@@ -38,16 +38,14 @@
                     <target>17</target>
                 </configuration>
             </plugin>
-                 <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-war-plugin</artifactId>
-    <version>3.3.1</version>
-    <configuration>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
-        <!-- You can customize other configurations if needed -->
-    </configuration>
-</plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -60,7 +58,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.example.Main</mainClass> <!-- Update with your actual main class -->
+                            <mainClass>org.example.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -70,7 +68,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.0.0</version>
                 <configuration>
-                    <mainClass>org.example.Main</mainClass> <!-- Update with your actual main class -->
+                    <mainClass>org.example.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
@@ -79,11 +77,11 @@
     <distributionManagement>
         <repository>
             <id>my-repo</id>
-            <url>http://my.repository.url/repository/maven-releases/</url>
+            <url>http://172.17.0.1:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>my-snapshot-repo</id>
-            <url>http://my.repository.url/repository/maven-snapshots/</url>
+            <url>http://172.17.0.1:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
