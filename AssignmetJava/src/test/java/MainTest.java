@@ -12,5 +12,7 @@ public class MainTest {
 
         // You can add your actual test code here to verify the behavior of Main class methods
         assertTrue(true); // Example test case
+        assertTrue(true); // Example test case
+
     }
 }
