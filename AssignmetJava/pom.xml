@@ -7,7 +7,7 @@
     <artifactId>AssignmetJava</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -86,5 +86,14 @@
         </plugins>
     </build>
 
-   
+    <distributionManagement>
+        <snapshotRepository>
+            <id>my-snapshot-repo</id>
+            <url>http://172.17.0.1:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>my-repo</id>
+            <url>http://172.17.0.1:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
 </project>
