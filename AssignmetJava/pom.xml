@@ -33,7 +33,6 @@
             <id>my-repo</id>
             <url>http://localhost:8081/repository/maven-releases/</url>
         </repository>
-        <!-- Optionally include a snapshot repository if you still need it -->
         <repository>
             <id>my-snapshot-repo</id>
             <url>http://localhost:8081/repository/maven-snapshots/</url>
@@ -88,16 +87,13 @@
     </build>
 
     <distributionManagement>
-        <repository>
-            <id>my-repo</id>
-            <url>http://localhost:8081/repository/maven-releases/</url>
-        </repository>
-        <!-- Optionally include snapshotRepository if you still need to deploy snapshots -->
-        <!--
         <snapshotRepository>
             <id>my-snapshot-repo</id>
             <url>http://localhost:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
-        -->
+        <repository>
+            <id>my-repo</id>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
     </distributionManagement>
 </project>
