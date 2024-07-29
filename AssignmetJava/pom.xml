@@ -16,6 +16,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>AssignmetJava</artifactId>
+            <version>1.0-20240728.142147-1</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
